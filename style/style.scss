@@ -1,0 +1,29 @@
+@import "_keyframes.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(46, 46, 46);
+    overflow: hidden;
+
+    #create{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100vw;
+        height: 10vh;
+        border: solid white;
+    }
+
+    #paperball-wrapper{
+        
+        .paperballs{
+            width: 4rem;
+            cursor: pointer;
+            animation: fall-animation 3s linear forwards;
+        }
+    }
+}

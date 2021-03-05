@@ -1,0 +1,50 @@
+@-webkit-keyframes fall-animation {
+  from {
+    -webkit-transform: translateY(0vh);
+            transform: translateY(0vh);
+  }
+  to {
+    -webkit-transform: translateY(88vh);
+            transform: translateY(88vh);
+  }
+}
+
+@keyframes fall-animation {
+  from {
+    -webkit-transform: translateY(0vh);
+            transform: translateY(0vh);
+  }
+  to {
+    -webkit-transform: translateY(88vh);
+            transform: translateY(88vh);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #2e2e2e;
+  overflow: hidden;
+}
+
+body #create {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 10vh;
+  border: solid white;
+}
+
+body #paperball-wrapper .paperballs {
+  width: 4rem;
+  cursor: pointer;
+  -webkit-animation: fall-animation 3s linear forwards;
+          animation: fall-animation 3s linear forwards;
+}
+/*# sourceMappingURL=style.css.map */
