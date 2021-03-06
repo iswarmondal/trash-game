@@ -1,22 +1,22 @@
 @-webkit-keyframes fall-animation {
   from {
-    -webkit-transform: translateY(0vh);
-            transform: translateY(0vh);
+    -webkit-transform: translateY(0vh) rotate(0deg);
+            transform: translateY(0vh) rotate(0deg);
   }
   to {
-    -webkit-transform: translateY(88vh);
-            transform: translateY(88vh);
+    -webkit-transform: translateY(88vh) rotate(1000deg);
+            transform: translateY(88vh) rotate(1000deg);
   }
 }
 
 @keyframes fall-animation {
   from {
-    -webkit-transform: translateY(0vh);
-            transform: translateY(0vh);
+    -webkit-transform: translateY(0vh) rotate(0deg);
+            transform: translateY(0vh) rotate(0deg);
   }
   to {
-    -webkit-transform: translateY(88vh);
-            transform: translateY(88vh);
+    -webkit-transform: translateY(88vh) rotate(1000deg);
+            transform: translateY(88vh) rotate(1000deg);
   }
 }
 
@@ -38,10 +38,15 @@ body #create {
   left: 0px;
   width: 100vw;
   height: 10vh;
-  border: solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-body #paperball-wrapper .paperballs {
+body .paperballs {
+  position: relative;
   width: 4rem;
   cursor: pointer;
   -webkit-animation: fall-animation 3s linear forwards;

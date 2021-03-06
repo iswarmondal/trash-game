@@ -1,3 +1,6 @@
+console.clear()
+
+
 // Remove paperballs on click
 const paperballs = document.querySelector(".paperballs");
 
@@ -9,7 +12,10 @@ const removeDOM = (element) => {
 setInterval(() => {
     // generate random integer number between 1 and 5
     const fractionNumber = (Math.random()*4) + 1;
-    const number = Math.floor(fractionNumber);
+    window.number = Math.floor(fractionNumber);
+    console.log(number)
+    
+    for(let i = number; i > 0; i--){
 
         // Elements
         const newBalls = document.createElement("img");
@@ -21,7 +27,7 @@ setInterval(() => {
             className.value = 'paperballs'
 
             const OnClick = document.createAttribute("onclick");
-            OnClick.value = 'removeDOM(paperballs)';
+            OnClick.value = 'removeDOM(this)';
 
             // add all the attributes to the tag
             newBalls.setAttributeNode(src);
@@ -30,5 +36,6 @@ setInterval(() => {
 
     // append the newBalls element to the create div
     const create = document.querySelector("#create").appendChild(newBalls);
-
-}, 5000);
+    }
+    
+}, 4000);

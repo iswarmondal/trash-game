@@ -15,15 +15,16 @@ body{
         left: 0px;
         width: 100vw;
         height: 10vh;
-        border: solid white;
+        display: flex;
+        justify-content: space-around;
     }
 
-    #paperball-wrapper{
-        
-        .paperballs{
-            width: 4rem;
-            cursor: pointer;
-            animation: fall-animation 3s linear forwards;
-        }
+    
+    .paperballs{
+        position: relative;
+        width: 4rem;
+        cursor: pointer;
+        animation: fall-animation 3s linear forwards;
     }
+    
 }
